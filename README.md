@@ -2,6 +2,7 @@
 A starter WooCommerce theme based on Bootstrap 5
 - starter theme
 - lightning fast
+- off-canvas mobile menu
 - will work with or without gutenberg web builder
 - will support third level menu
 - extend the features with your CSS knowledge
