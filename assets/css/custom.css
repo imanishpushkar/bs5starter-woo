@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+html,
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+span {
+    color: #f68e91;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    color: inherit;
+}
+
+.navbar-brand h3 {
+    font-size: 1.23rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+}
+
+.cta-primary {
+    color: #e50010;
+    position: relative;
+    text-decoration: none;
+}
+
+.cta-primary:hover {
+    color: #99000b;
+}
+
+.cta-primary::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ffc0cb;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.cta-primary:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+body.offcanvas-active {
+    overflow: hidden;
+}
+
+.offcanvas-header {
+    display: none;
+}
+
+.screen-darken {
+    height: 100%;
+    width: 0%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition: opacity .2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active {
+    z-index: 10;
+    transition: opacity .3s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=select],
+input[type=tel],
+input[type=text],
+select,
+textarea {
+    background-color: #ccc;
+    color: #333;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: .3em;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: .44em 1.23em;
+    background-color: #e50010;
+    border: 0 transparent;
+    color: #fff;
+}
+
+input[type=submit]:hover {
+    background-color: #191919;
+    cursor: pointer;
+}
+
+.page-content img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*
+third level menu bootstrap 5
+*/
+
+@media all and (min-width: 992px) {
+    ul.depth_1 {
+        left: 100% !important;
+        top: 0% !important
+    }
+    ul.depth_0>.menu-item-has-children a:after {
+        display: inline-flex;
+        content: "";
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #cccccc;
+    }
+    ul.depth_1 a:after {
+        border: 0 !important;
+    }
+}
+
+
+/*
+WooCommerce
+*/
+
+.woocommerce #content table.cart img,
+.woocommerce table.cart img,
+.woocommerce-page #content table.cart img,
+.woocommerce-page table.cart img {
+    height: auto;
+    width: 200px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #e50010 !important;
+}
+
+.nav-link.active {
+    color: #e50010 !important;
+}
+
+
+/* ============ mobile view ============ */
+
+@media all and (max-width: 991px) {
+    .offcanvas-header {
+        display: block;
+    }
+    .cart-desktop {
+        display: none !important;
+    }
+    .mobile-offcanvas {
+        visibility: hidden;
+        transform: translateX(-100%);
+        border-radius: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 80%;
+        z-index: 1200;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+    }
+    .mobile-offcanvas.show {
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .mobile-offcanvas .container,
+    .mobile-offcanvas .container-fluid {
+        display: block;
+    }
+    .mb-1 {
+        border-top: 2px solid #ccc;
+        padding: 1.23rem 0;
+    }
+}
