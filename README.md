@@ -9,3 +9,5 @@ A starter WooCommerce theme based on Bootstrap 5
 - will work with any future WordPress/ WooCommerce updates
 - it's free and opensource, you can simply install and activate, start using :)
 - concern ? reach me at hello@manishpushkar.in
+<br/><br/>
+![Screenshot](screenshot.png)<br/><br/>
